@@ -9,11 +9,10 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
+PORT = int(os.environ.get('PORT', 5000))
 
 TOKEN = 'YOUR-TELEGRAM-BOT-TOKEN'
 HEROKU_APP_URL = 'HEROKU-APP-URL'
-PORT = int(os.environ.get('PORT', 5000))
-
 
 MONGODB_CLIENT = 'MONGODB-CONNECTION-URL'
 DB_NAME = 'DB-NAME'
@@ -27,7 +26,7 @@ todo_list = db[COLLECTION_NAME]
 def start(update, context):
     """Send a message when the command /start is issued."""
     chat_id = update["message"]["chat"]["id"]
-    todo_list.find_one_and_update({'chat_id' : chat_id}, {"$set": {"todo_list": []}}, upsert=True)
+    todo_list.find_one_and_update({'chat_id' : chat_id}, {"$set": {"todo_list": [], "done_list": []}}, upsert=True)
     update.message.reply_text('Hi!')
 
 def help(update, context):
@@ -97,7 +96,7 @@ def main():
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("todo", to_do))
     dp.add_handler(CommandHandler("done", done))
-    dp.add_handler(CommandHandler("dones", get_done_list))
+    dp.add_handler(CommandHandler("done_list", get_done_list))
     dp.add_handler(CommandHandler("list", list_items))
 
     dp.add_handler(MessageHandler(Filters.text, echo))
