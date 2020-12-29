@@ -2,7 +2,7 @@
 Telegram TODO list bot
 
 ## Screenshot
-![usage](https://github.com/bakyazi/tlg-todo-list-bot/blob/master/todobot.png?raw=true)
+  ![usage](https://github.com/bakyazi/tlg-todo-list-bot/blob/main/blob/todobot.png?raw=true)
 
 
 ## Usage
@@ -21,7 +21,7 @@ Telegram TODO list bot
   - Then type as below
   - ***Take note the bot token***
     
-![botfather](https://github.com/bakyazi/tlg-todo-list-bot/blob/master/botfather.png?raw=true)
+![botfather](https://github.com/bakyazi/tlg-todo-list-bot/blob/main/blob/botfather.png?raw=true)
 
 ### 2- Create Heroku App
   - Create Heroku Account (https://signup.heroku.com/dc)
@@ -37,11 +37,11 @@ Telegram TODO list bot
   - Create a project
   - In project, create a cluster (***Note:*** you will determin your database, username and password in this stage)
   - After cluster create, click ***Connect*** button <br>
-  ![mongo1](https://github.com/bakyazi/tlg-todo-list-bot/blob/master/mongo1.png?raw=true)
+  ![mongo1](https://github.com/bakyazi/tlg-todo-list-bot/blob/main/blob/mongo1.png?raw=true)
   - Then, ***Connect your application*** <br>
-  ![mongo2](https://github.com/bakyazi/tlg-todo-list-bot/blob/master/mongo2.png?raw=true)
+  ![mongo2](https://github.com/bakyazi/tlg-todo-list-bot/blob/main/blob/mongo2.png?raw=true)
   - Lastly, it will generate the connection string after you choose python & version. You should replace your password & database name with related parts <br>
-  ![mongo3](https://github.com/bakyazi/tlg-todo-list-bot/blob/master/mongo3.png?raw=true)
+  ![mongo3](https://github.com/bakyazi/tlg-todo-list-bot/blob/main/blob/mongo3.png?raw=true)
   
 ### 4- Code
 Replace following variables with values you obtain above
